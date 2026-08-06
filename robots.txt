@@ -1,0 +1,8 @@
+---
+permalink: /robots.txt
+---
+# PREVIEW COPY of the KHU-SysSec site, published only so lab members can
+# review design changes. It must never be indexed — the real site is
+# https://syssec.khu.ac.kr. Sitemap line is intentionally omitted.
+User-agent: *
+Disallow: /
