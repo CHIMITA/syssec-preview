@@ -52,11 +52,11 @@ body.sticky-bottom-footer {
 }
 
 // Member detail body. Without these, the `## …` section headings fall back to
-// the browser default <h2> (≈1.5em / 700), which is much larger than the
-// section headings everywhere else on the site (1.2–1.35rem / 650).
+// the browser default <h2> (≈1.5em / 700) instead of the site's section
+// heading step (1.35rem / 650), which every other page now shares.
 .profile-body {
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 650;
     margin: 2.2rem 0 0.75rem;
   }
@@ -118,7 +118,7 @@ body.sticky-bottom-footer {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-size: 1.35rem;
-  font-weight: 600;
+  font-weight: 650;
   letter-spacing: 0.02em;
   color: $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
@@ -178,13 +178,17 @@ hr {
 // TODO: redefine content layout.
 
 
+// 페이지 제목. 예전에는 'Playfair Display'를 지정했는데 그 폰트는 어디에서도
+// 로드되지 않아 브라우저 기본 serif(Times 계열)로 폴백됐고, 결국 방문자 OS마다
+// 다른 글꼴로 보였다. 사이트 전체가 쓰는 Pretendard를 그대로 상속받게 한다.
 .post-title {
   display: flex;
   align-items: center;
-  font-family: 'Playfair Display', serif; /* 원하는 폰트 지정 */
-  font-weight: 700; /* 굵게 */
-  font-size: 2.2rem; /* 크기 조정 */
-  color: var(--global-text-color); /* 다크모드 대응 (원래 #333) */
+  font-weight: 700;
+  font-size: 1.9rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--global-text-color);
 }
 
 .lab-logo {
